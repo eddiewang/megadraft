@@ -103,19 +103,10 @@ class Media extends Component {
       if (type === plugin.type) {
         const Block = plugin.blockComponent;
         return (
-          <div style={MediaStyle.blockHover}>
-            <div style={MediaStyle.blockWrapper}>
-              <MediaControls
-                dropdownItems={this.dropdownItems}
-                actionsItems={this.actionsItems}
-                selectedFeatured={data.featured || this.defaultFeatured}
-                setFeatured={this.setFeatured} />
               <Block
                 data={data}
                 setReadOnly={setReadOnly}
                 updateEntity={this.updateEntity} />
-            </div>
-          </div>
         );
       }
     }
