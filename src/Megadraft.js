@@ -77,7 +77,7 @@ class Megadraft extends Component {
   }
 
   render() {
-    const {editorState} = this.props;
+    const {editorState, readOnly} = this.props;
     const plugins = this.plugins;
 
     return (
@@ -92,7 +92,7 @@ class Megadraft extends Component {
             editorState={editorState}
             onChange={::this.onChange}/>
           <Editor
-            readOnly={this.state.readOnly}
+            readOnly={this.props.readOnly ? this.props.readOnly : this.state.readOnly}
             plugins={plugins}
             blockRendererFn={::this.mediaBlockRenderer}
             handleKeyCommand={::this.handleKeyCommand}
