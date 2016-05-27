@@ -54,22 +54,6 @@ class ImageBlock extends Component {
         <div style={ImageBlockStyle.imageWrapper}>
           <img style={ImageBlockStyle.image} src={this.props.data.src} alt=""/>
         </div>
-        <div style={BlockStyle.dataBlock}>
-          <input type="text"
-            placeholder="Caption"
-            style={BlockStyle.dataField}
-            value={this.state.caption}
-            onFocus={this._handleFocus}
-            onBlur={this._handleBlur}
-            onChange={this._handleCaptionChange} />
-          <input type="text"
-            placeholder="Rights Holder"
-            style={BlockStyle.dataField}
-            value={this.state.rightsHolder}
-            onFocus={this._handleFocus}
-            onBlur={this._handleBlur}
-            onChange={this._handleRightsHolderChange} />
-        </div>
       </div>
     );
   }
